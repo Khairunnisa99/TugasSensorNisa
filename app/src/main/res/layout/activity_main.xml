@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="10mm"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/azimuthTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Azimuth: "
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/pitchTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pitch: "
+        android:layout_below="@id/azimuthTextView"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/rollTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Roll: "
+        android:layout_below="@id/pitchTextView"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/magneticXTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Magnetic X: "
+        android:layout_below="@id/rollTextView"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/magneticYTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Magnetic Y: "
+        android:layout_below="@id/magneticXTextView"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/magneticZTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Magnetic Z: "
+        android:layout_below="@id/magneticYTextView"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/latitudeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lokasi saya: "
+        android:layout_below="@id/magneticZTextView"
+        android:layout_marginBottom="16dp"/>
+
+
+    <Button
+        android:id="@+id/FindMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lokasi"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>
