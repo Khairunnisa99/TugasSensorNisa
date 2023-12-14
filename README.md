@@ -1,5 +1,4 @@
-# Repository-Baru
-# TugasSensor
-# Repository-Baru
-# Repository-Baru
-# Repository-Baru
+# Nama : Khairun Nisa
+# Niu : 490189
+# Link github :
+# https://github.com/Khairunnisa99/TugasSensorNisa.git
