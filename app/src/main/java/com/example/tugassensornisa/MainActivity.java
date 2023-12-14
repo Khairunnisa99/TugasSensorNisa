@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private float[] magneticFieldValues = new float[3];
 
     private TextView azimuthTextView, pitchTextView, rollTextView;
-    private TextView MagnetX,MagnetY, MagnetZ, Lokasiku;
+    private TextView MagnetX,MagnetY, MagnetZ, Lokasiku, titikLokasi;
 
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
 
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         MagnetZ = findViewById(R.id.magneticZTextView);
 
         Lokasiku = findViewById(R.id.latitudeTextView);
-
+        titikLokasi = findViewById(R.id.KoordinatTextView);
 
 
         mFindME = findViewById(R.id.FindMe);
@@ -141,6 +141,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
                                 // Display the location in mTextLokasi
                                 Lokasiku.setText("Lokasi Saya: " + address);
+                                titikLokasi.setText("titik Lokasi : " + latitude +" ,"+longitude);
                             } else {
                                 Toast.makeText(MainActivity.this, "Could not get location. Please enable GPS.", Toast.LENGTH_SHORT).show();
                             }
@@ -278,6 +279,9 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             // Tulis data ke file CSV
             BufferedWriter buf = new BufferedWriter(new FileWriter(csvFile, true));
             buf.append(System.currentTimeMillis() + "," + text + "," + location);
+
+            buf.append(",").append(titikLokasi.getText().toString());
+
             buf.newLine();
             buf.close();
         } catch (IOException e) {
